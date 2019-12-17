@@ -1,0 +1,45 @@
+
+
+*{
+    scrollbar-color: #3b3d3e #303132;
+}
+body{
+    color: rgb(200, 198, 194);
+    background-color: rgb(45, 46, 47);
+}
+
+a{
+    color: rgb(66, 155, 230);
+    text-decoration-color: currentcolor;
+    background-color:transparent;}
+
+.card{
+    background-color: rgb(45, 46, 47);
+
+    border-color: rgba(107, 107, 107, 0.13);
+}
+
+.btn{
+    color: rgb(200, 198, 194);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    display: inline-block;
+}
+.inputfile + label {
+    cursor: pointer; /* "hand" cursor */
+}

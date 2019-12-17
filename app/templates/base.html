@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='js/ajax_script.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/file_upload.js') }}"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/scroll_board.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/packets_data.css') }}">
+
+      {% if title %}
+      <title>{{ title }} - Microblog</title>
+      {% else %}
+      <title>Welcome to Microblog</title>
+      {% endif %}
+    </head>
+    <body>
+
+
+
+        <div>Microblog: <a href="/index">Home</a></div>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-12">
+
+        <div> <input type="file" name="file" id="file" class="inputfile" />
+            <label for="file">Choose a file</label> </div>
+
+  </div>
+
+</div>
+
+
+  <div class="row">
+    <div class="col-4">
+      {% block content %}{% endblock %}
+    </div>
+    <div class="col-8">
+       {% block content2 %}{% endblock %}
+    </div>
+  </div>
+
+
+
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,20 @@
+.headers_stream{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: midnightblue;
+    margin-bottom:2px;
+}
+.headers_stream p{
+    padding:0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.headers_stream .name_service{
+    position: relative;
+    font-weight: bold;
+    font-size: 15px;
+}
+input{
+    color: red;
+}
