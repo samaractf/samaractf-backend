@@ -1,45 +1,37 @@
 
-
 *{
-    scrollbar-color: #3b3d3e #303132;
+
+    box-sizing: border-box;
 }
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+
 body{
     color: rgb(200, 198, 194);
-    background-color: rgb(45, 46, 47);
+    background-color: #100E17;
+    padding: 0 40px;
+}
+
+.logo img{
+width: 34px;
+height: 38px;
+}
+.logo{
+    --nav-height: 130px;
+}
+
+header{
+display: flex;
+border-bottom: 1px solid #201c29;}
+
+header nav img{
+width: 34px;
+height: 38px;
 }
 
 a{
     color: rgb(66, 155, 230);
     text-decoration-color: currentcolor;
     background-color:transparent;}
-
-.card{
-    background-color: rgb(45, 46, 47);
-
-    border-color: rgba(107, 107, 107, 0.13);
-}
-
-.btn{
-    color: rgb(200, 198, 194);
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.inputfile {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-.inputfile + label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: white;
-    display: inline-block;
-}
-.inputfile + label {
-    cursor: pointer; /* "hand" cursor */
-}
