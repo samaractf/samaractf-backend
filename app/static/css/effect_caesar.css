@@ -1,0 +1,12 @@
+
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+html,
+
+.text {
+  font-weight: 100;
+  font-size: 28px;
+  color: #fafafa;
+}
+.dud {
+  color: #757575;
+}
