@@ -1,6 +1,5 @@
 
 *{
-
     box-sizing: border-box;
 }
 
@@ -12,26 +11,121 @@ body{
     color: rgb(200, 198, 194);
     background-color: #100E17;
     padding: 0 40px;
+    margin-left: 0px;
+    color:#fff;
+
+    letter-spacing: 2px;
+    font-family: Open Sans;
+    font-size: 20px;
 }
 
-.logo img{
-width: 34px;
-height: 38px;
+.logo {
+width: 110px;
+height: auto;
+    display: flex;
 }
-.logo{
-    --nav-height: 130px;
+header {
+    margin-left: auto;
 }
+
 
 header{
-display: flex;
-border-bottom: 1px solid #201c29;}
+    max-height: 200px;
+border-bottom: 1px solid #201c29;
+    grid-area: header;
+    margin-left:auto;
+}
+header a{
+    display: grid;
+}
 
-header nav img{
-width: 34px;
-height: 38px;
+header div{
+    display: grid;
+    align-content: center;
+}
+header img{
+    max-width:100%;
 }
 
 a{
     color: rgb(66, 155, 230);
     text-decoration-color: currentcolor;
     background-color:transparent;}
+a:active, a:focus {
+  outline: none;
+}
+
+
+
+main {
+    height:1500px;
+
+}
+main .row{
+      display: flex;
+  flex-wrap: wrap;
+
+}
+main div{
+
+}
+main img{  /* на весь размер экрана, вычитая шапку*/
+   max-width: 100%;
+    display: flex;
+}
+
+
+.container-fluid{
+    margin-left: 0px;
+        padding-left: 0px;
+
+}
+
+main .row >div{
+    height: 100vh;
+    display: flex;
+
+}
+main .row:first-child > div {
+    height: calc(100vh - 110px);
+    font-size:30px;
+    width:50%;
+    align-items: center;
+}
+
+.gradient-text {
+
+  font-size: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(1360deg, #F05A00 33%, #bd772c 66%, #AE2020);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  display: table;
+  margin: 20px auto;
+}
+
+text-justify{
+    text-align: center;
+
+}
+
+p::selection {
+   background: transparent;
+}
+p{
+    cursor: default;
+}
+p::-moz-selection {
+   background: transparent;
+}
+
+.blob-top-right {
+    position: absolute;
+    top: -95px;
+    right: -20px;
+    width: 500px;
+    height: 332px;
+    z-index: -1;
+    -webkit-filter: saturate(125%);
+    filter: saturate(125%);
