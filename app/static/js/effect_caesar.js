@@ -56,7 +56,7 @@ var TextScramble = function () {
           char = this.randomChar();
           this.queue[i].char = char;
         }
-        output += '<span class="dud text-center">' + char + '</span>';
+        output += '<span class="dud">' + char + '</span>';
       } else {
         output += from;
       }
@@ -100,7 +100,7 @@ var fx = new TextScramble(el);
 var counter = 0;
 var next = function next() {
   fx.setText(phrases[counter]).then(function () {
-    setTimeout(next, 800);
+    setTimeout(next, 1000);
   });
   counter = (counter + 1) % phrases.length;
 };
