@@ -4,8 +4,11 @@
   <script src="{{ url_for('static', filename='js/scrollme.js') }}"></script>
         <script src="{{ url_for('static', filename='js/effect_caesar.js') }}"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/effect_caesar.css') }}">
+
+
 
 
       {% if title %}
@@ -18,23 +21,23 @@
 
         <header class="container-fluid">
             <div class="row">
-  <div class="col-sm-8 col-md-4 col-xl-5 justify-content-center" >
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-5 justify-content-center" >
     <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}"></div>
 
-  <div class="col-md-1 col-xl-1" id="home"><a href="#">
-    <img class="logo" src="{{ url_for('static', filename='img/home.png') }}">
+  <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 col-xl-1" id="home"><a href="#">
+ <!--   <img class="logo" src="{{ url_for('static', filename='img/home.png') }}"> -->
                 <span class="text-center">Home</span></a>
   </div>
-  <div class="col-md-1 col-xl-1" id="tasks"><a href="#">
-<img class="logo" src="{{ url_for('static', filename='img/tasks.png') }}">
+  <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 col-xl-1" id="tasks"><a href="#">
+<!--<img class="logo" src="{{ url_for('static', filename='img/tasks.png') }}"> -->
                     <span class="text-center">Tasks</span></a>
   </div>
-  <div class="col-md-1 col-xl-1" id="articles"><a href="#">
-<img class="logo" src="{{ url_for('static', filename='img/articles.png') }}">
+  <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 col-xl-1" id="articles"><a href="#">
+<!--<img class="logo" src="{{ url_for('static', filename='img/articles.png') }}">-->
                     <span class="text-center">Articles</span></a>
   </div>
-  <div class="col-md-1 col-xl-1" id="about"><a href="#">
-<img class="logo" src="{{ url_for('static', filename='img/about.png') }}">
+  <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 col-xl-1" id="about"><a href="#">
+<!--<img class="logo" src="{{ url_for('static', filename='img/about.png') }}">-->
                     <span class="text-center">About</span></a>
   </div>
 </div>

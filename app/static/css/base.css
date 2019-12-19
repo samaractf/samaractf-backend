@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+
+p::selection {
+   background: transparent;
+}
+p, span{
+    cursor: default;
+}
+p::-moz-selection {
+   background: transparent;
+}
+
+a{
+    color: rgb(66, 155, 230);
+    text-decoration-color: currentcolor;
+    background-color:transparent;}
+a:active, a:focus {
+  outline: none;
+}
+
+
+body{
+    color: rgb(200, 198, 194);
+    background-color: #100E17;
+    padding: 0 40px;
+    margin-left: 0px;
+    color:#fff;
+
+    letter-spacing: 2px;
+    font-family: Open Sans;
+    font-size: 20px;
+}
+
+header {
+    margin-left: auto;
+}
+
+
+header{
+   /*  max-height: 200px;*/
+    min-height: 110px;
+border-bottom: 1px solid #201c29;
+    grid-area: header;
+    margin-left:auto;
+}
+header a{
+    display: grid;
+}
+
+header div{
+    display: grid;
+    align-content: center;
+        height: auto;
+}
+header img{
+    max-width:100%;
+}
+
+.logo {
+width: 110px;
+height: auto;
+    display: flex;
+}
+
+
+
+#home a:hover {
+  color:#e74c3c;
+}
+
+#tasks a:hover {
+  color:#BF55EC;
+}
+
+#articles a:hover {
+  color:#f39c12;
+}
+#about a:hover {
+  color: #cdf030;
+}
