@@ -31,7 +31,7 @@ body{
     padding: 0 40px;
     margin-left: 0px;
     color:#fff;
-
+    min-height: 100vh;
     letter-spacing: 2px;
     font-family: Open Sans;
     font-size: 20px;
@@ -83,4 +83,9 @@ height: auto;
 }
 #about a:hover {
   color: #cdf030;
+}
+footer .row > div{
+    display: flex;
+
+width: 100%;
 }
