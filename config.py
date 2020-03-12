@@ -20,6 +20,9 @@ class DevelopmentConfig(Config):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['your-email@example.com']
+    # set optional bootswatch theme
+    FLASK_ADMIN_SWATCH = 'superhero'
+    FLASKY_ADMIN = "tk95z3ag7bs2@mail.ru"
 class TestingConfig(Config):
     TESTING = True
 

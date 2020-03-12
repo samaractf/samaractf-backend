@@ -1,12 +1,34 @@
 from app import app
-from flask import render_template, request, flash, redirect, url_for
+from flask import render_template, request, flash, redirect, url_for, current_app
 from app.forms import LoginForm
 from flask_login import current_user, login_user, logout_user
-from app.models import User
+from app.models import User, Role
 from werkzeug.urls import url_parse
 from app import db
-from app.forms import RegistrationForm, ResetPasswordRequestForm
+from app.forms import RegistrationForm, ResetPasswordRequestForm, ResetPasswordForm
 from app.email import send_password_reset_email
+
+from flask_admin import Admin, BaseView, expose
+import flask_admin as admin
+from app.decorators import admin_required, permission_required
+from flask_admin.contrib.sqla import ModelView
+from flask_admin import AdminIndexView
+
+
+
+class MyAdmin(admin.AdminIndexView):
+    @expose('/')
+    @admin_required
+    def index(self):
+        print(current_user.get_id())
+        return super(MyAdmin, self).index()
+
+admin = Admin(app, name='samaraCTF', template_mode='bootstrap3', index_view=MyAdmin())
+admin.add_view(ModelView(User, db.session))
+admin.add_view(ModelView(Role, db.session))
+
+
+
 
 @app.route('/',methods=['GET', 'POST'])
 def index():
@@ -20,7 +42,11 @@ def login():
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
             return redirect(url_for('login'))
+
+        # Keep the user info in the session using Flask-Login
         login_user(user, remember=form.remember_me.data)
+
+
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('index')
@@ -75,3 +101,7 @@ def reset_password(token):
         flash('Your password has been reset.')
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)
+
+
+
+
